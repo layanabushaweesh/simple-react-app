@@ -4,13 +4,21 @@ import Child from "./child"
 // import Test2  from "./module";
 
 class App extends Component {
+  // setstate use to change data in state
   state = {
-    name : "leen"
+    name : "leen",
+    age : 27
   }
   // arrow function
 
-  handleClick = () => console.log (this.state.name)
-  
+  handleClick = () => {
+    this.setState({
+      name : "ahmad",
+      age:30
+    }
+
+    )
+  }
   render() {
     return (
       <div className="app">
@@ -20,6 +28,8 @@ class App extends Component {
         {/* dynamic data */}
         {/* { this.Test()} */}
         <button onClick={this.handleClick}> click</button>
+        <p>{this.state.name}</p>
+        <p>{this.state.age}</p>
       </div>
     )
   }
