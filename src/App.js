@@ -4,8 +4,12 @@ import Child from "./child"
 // import Test2  from "./module";
 
 class App extends Component {
+  state = {
+    name : "leen"
+  }
   // arrow function
-  Test = () => console.log (" test")
+
+  handleClick = () => console.log (this.state.name)
   
   render() {
     return (
@@ -14,7 +18,8 @@ class App extends Component {
         {/*  nested component *component inside component*/}
         < Child />
         {/* dynamic data */}
-        { this.Test()}
+        {/* { this.Test()} */}
+        <button onClick={this.handleClick}> click</button>
       </div>
     )
   }
