@@ -24,7 +24,7 @@ class App extends Component {
       <div className="app">
         {/* like this i call the component */}
         {/*  nested component *component inside component*/}
-        < Child />
+        < Child test={this.state.name} />
         {/* dynamic data */}
         {/* { this.Test()} */}
         <button onClick={this.handleClick}> click</button>
