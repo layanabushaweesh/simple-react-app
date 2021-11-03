@@ -9,11 +9,11 @@ class Items extends Component {
         const {items} = this.props;
         const theItems = items.map((item)=> {
             return(
-                <div>
-                 <p>{item.id}</p>   
-                 <p>{item.name}</p>   
-                 <p>{item.age}</p>   
-                    
+                <div key={Math.random() * 10}>
+                 <div>{item.id}</div>   
+                 <div>{item.name}</div>   
+                 <div>{item.age}</div>   
+                 <div>*********</div>
                 </div>
             )
 
