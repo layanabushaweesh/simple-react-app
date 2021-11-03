@@ -1,5 +1,5 @@
 import React , { Component } from "react";
-import Items from "./components/items" 
+// import Items from "./components/items" 
 // import { x as num1, y , Test} from "./module";
 // import Test2  from "./module";
 
@@ -19,14 +19,27 @@ class App extends Component {
 
   //   )
   // }
+  // state ={
+  //   items :  [
+  //     {id:1 , name: "layan" , age:22},
+  //     {id: 2, name: "ahmad" , age:22},
+  //     {id: 3, name: "lolo" , age:22}
+
+
+  //   ]
+  // }
   state ={
-    items :  [
-      {id:1 , name: "layan" , age:22},
-      {id: 2, name: "ahmad" , age:22},
-      {id: 3, name: "lolo" , age:22}
+    name : ''
+  }
+  handlechange = (e)=>{
+    this.setState({
+      name : e.target.value
+    })
 
-
-    ]
+  }
+  handlesubmit =(e)=>{
+    e.preventDefault()
+    console.log(this.state.name)
   }
   render() {
     return (
@@ -40,7 +53,13 @@ class App extends Component {
         {/* <p>{this.state.name}</p> */}
         {/* <p>{this.state.age}</p> */} 
         list item
-        <Items items={this.state.items} />
+        <form  onSubmit={this.handlesubmit}>
+          <input type ="text" onChange={this.handlechange} />
+          <button>submit</button>
+        </form>
+
+        {this.state.name}
+        {/* <Items items={this.state.items} /> */}
         
 
       </div>
