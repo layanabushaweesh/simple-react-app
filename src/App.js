@@ -54,8 +54,14 @@ class App extends Component {
         {/* <p>{this.state.age}</p> */} 
         list item
         <form  onSubmit={this.handlesubmit}>
-          <input type ="text" onChange={this.handlechange} />
-          <button>submit</button>
+          {/* <textarea type ="text" onChange={this.handlechange} /> */}
+          <select onChange={this.handlechange}>
+<option value="value1">value 1</option>
+<option value="value2">value 2</option>
+<option value="value3">value 3</option>
+
+          </select>
+          <input type="submit" value="send" />
         </form>
 
         {this.state.name}
