@@ -8,14 +8,14 @@ class Items extends Component {
         // const {id , name , age} =this.props;
         const {items} = this.props;
         const theItems = items.map((item)=> {
-            return(
-                <div key={Math.random() * 10}>
-                 <div>{item.id}</div>   
-                 <div>{item.name}</div>   
-                 <div>{item.age}</div>   
-                 <div>*********</div>
-                </div>
-            )
+        return item.count > 0 ? ( 
+            <div key={Math.random() * 10}>
+             <div>{item.id}</div>   
+             <div>{item.name}</div>   
+             <div>{item.age}</div>   
+             <div>*********</div>
+            </div>
+        ): null
 
         })
         return(
