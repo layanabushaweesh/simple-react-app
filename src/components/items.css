@@ -1,0 +1,9 @@
+.item:first-of-type{
+    background-color: brown;
+}
+.item:nth-of-type(2){
+    background-color: plum;
+}
+.item:last-of-type{
+    background-color : pink;
+}

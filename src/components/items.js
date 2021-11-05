@@ -1,5 +1,5 @@
 import React , { Component } from "react";
-
+import "./items.css"
 class Items extends Component {
     render(){
         // const id =this.props.id;
@@ -9,7 +9,7 @@ class Items extends Component {
         const {items} = this.props;
         const theItems = items.map((item)=> {
         return item.count > 0 ? ( 
-            <div key={Math.random() * 10}>
+            <div className="item" key={Math.random() * 10}>
              <div>{item.id}</div>   
              <div>{item.name}</div>   
              <div>{item.age}</div>   
