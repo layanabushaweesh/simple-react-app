@@ -4,6 +4,10 @@ import Items from "./components/items"
 // import Test2  from "./module";
 
 class App extends Component {
+  constructor(){
+    super();
+    console.log("constructor")
+  }
   // setstate use to change data in state
   // state = {
   //   name : "leen",
@@ -19,6 +23,13 @@ class App extends Component {
 
   //   )
   // };
+  componentDidMount(){
+    console.log("componentdid")
+  }
+  componentDidUpdate(prevProps,prevState){
+    console.log("update",prevProps,prevState)
+
+  }
   state ={
     items :  [
       {id:1 , name: "layan" , age:22 , count :0},
@@ -41,6 +52,22 @@ class App extends Component {
   //   e.preventDefault()
   //   console.log(this.state.name)
   // }
+  handleClick =(e)=>{
+    let rand = Math.random()
+let items = this.state.items
+items.push({id: rand, name: "shahem" , age:20 , count :10})
+this.setState({
+  items : items
+})
+  }
+  handleDelete =(e)=>{
+    
+    this.setState({
+      items : [
+        {id: 5, name: "layan" , age:20 , count :10}
+      ]
+    })
+      }
   render() {
     return (
       <div className="app">
@@ -60,6 +87,8 @@ class App extends Component {
 <option value="value1">value 1</option>
 <option value="value2">value 2</option>
 <option value="value3">value 3</option> */}
+<button onClick={this.handleClick}>add</button>
+<button onClick={this.handleDelete}>delete</button>
 
           {/* </select>
           <input type="submit" value="send" />

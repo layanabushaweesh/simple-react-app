@@ -7,3 +7,9 @@
 .item:last-of-type{
     background-color : pink;
 }
+.item {
+    width: 88%;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 15px auto;
+}
