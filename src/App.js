@@ -3,13 +3,15 @@ import Nav from "./components/Nav"
 import Home from "./components/Home"
 import About from "./components/About"
 import Blog from "./components/blog"
+import Rout from "./components/Rout"
 
 import {
   BrowserRouter,
   Routes,
-  Route
+  Route,
+ 
 } from "react-router-dom";
-
+import {Switch} from "react-router-dom"
 // import { BrowserRouter , Route } from "react-router-dom"
 
 // import Items from "./components/items" 
@@ -18,17 +20,19 @@ import {
 
 class App extends Component {
  
-  render() {
-    return (
+  render(){
+    return(
       <BrowserRouter>
       <div>
       <Nav />
 
       <Routes>
-
-        <Route exact path="/" component =  {Home} />
-        <Route path="/about" component = {About} />
-        <Route path="/blog" component = {Blog} />
+        <Switch>
+          <Route exact path="/" component =  {Home} />
+          <Route path="/about" component = {About} />
+          <Route path="/blog" component = {Blog} />
+          <Route path="/:test_params" component = {Rout} />
+        </Switch>
         
       </Routes>
 

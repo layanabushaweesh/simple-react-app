@@ -13,12 +13,26 @@ class Blog extends  Component{
         })
     }
     render(){
+        const {users} = this.state
+        const userList = users.map(user =>{
+            return(
+                <div key={user.id}>
+                  <div>
+                      <div className="content">
+                        <div>Name : {user.name}</div>
+                        <div>userName : {user.username}</div>
+
+                      </div>
+                  </div>
+                </div>
+            )
+        })
         return(
             <div>
                     <h2>blog page</h2>
                     <p>lorim</p>
                     <div>
-                        {this.state.users.map(user => <div>{user.name}</div>)}
+                        
                     </div>
                     
             </div>
