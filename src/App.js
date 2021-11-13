@@ -1,5 +1,6 @@
 import React , { Component } from "react";
-import Col from "./components/col"
+import theImage from "./pv.jpg"
+// import Col from "./components/col"
 // import Home from "./components/Home"
 // import About from "./components/About"
 // import Blog from "./components/blog"
@@ -24,8 +25,9 @@ class App extends Component {
     return(
       // <BrowserRouter>
       <div>
+        <img src={theImage} className="img"/>
       {/* <Nav />
-
+        
       <Routes>
         <Switch>
           <Route exact path="/" component =  {Home} />
@@ -35,13 +37,13 @@ class App extends Component {
         </Switch>
         
       </Routes> */}
-      <table>
-        <tbody>
+      {/* <table> */}
+        {/* <tbody>
           <tr>
             <Col />
-          </tr>
-        </tbody>
-      </table>
+          </tr> */}
+        {/* </tbody> */}
+      {/* </table> */}
 
       </div>
       // </BrowserRouter>
