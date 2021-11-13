@@ -1,17 +1,17 @@
 import React , { Component } from "react";
-import Nav from "./components/Nav"
-import Home from "./components/Home"
-import About from "./components/About"
-import Blog from "./components/blog"
-import Rout from "./components/Rout"
+import Col from "./components/col"
+// import Home from "./components/Home"
+// import About from "./components/About"
+// import Blog from "./components/blog"
+// import Rout from "./components/Rout"
 
-import {
-  BrowserRouter,
-  Routes,
-  Route,
+// import {
+//   BrowserRouter,
+//   Routes,
+//   Route,
  
-} from "react-router-dom";
-import {Switch} from "react-router-dom"
+// } from "react-router-dom";
+// import {Switch} from "react-router-dom"
 // import { BrowserRouter , Route } from "react-router-dom"
 
 // import Items from "./components/items" 
@@ -22,9 +22,9 @@ class App extends Component {
  
   render(){
     return(
-      <BrowserRouter>
+      // <BrowserRouter>
       <div>
-      <Nav />
+      {/* <Nav />
 
       <Routes>
         <Switch>
@@ -34,10 +34,17 @@ class App extends Component {
           <Route path="/:test_params" component = {Rout} />
         </Switch>
         
-      </Routes>
+      </Routes> */}
+      <table>
+        <tbody>
+          <tr>
+            <Col />
+          </tr>
+        </tbody>
+      </table>
 
       </div>
-      </BrowserRouter>
+      // </BrowserRouter>
     );
   }
 }
